@@ -1,0 +1,63 @@
+/* ==========================================================
+   FENÊTRE MODALE (LIGHTBOX) - PHOTO EN GRAND PROPRE
+   ========================================================== */
+.photo-modal-overlay {
+  display: none; /* Cachée par défaut */
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.9
+  ) !important; /* Fond très sombre style visionneuse */
+  z-index: 999999 !important; /* Force la modale à passer par-dessus TOUT (footer, header, etc.) */
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.photo-modal-box {
+  position: relative !important;
+  max-width: 90vw !important;
+  max-height: 90vh !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.photo-modal-content {
+  max-width: 85vw !important;
+  max-height: 85vh !important;
+  object-fit: contain !important;
+  border-radius: 6px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8) !important;
+  border: 2px solid cyan; /* Rappel du thème cyan de ton site */
+}
+
+/* Croix de fermeture (X) bien visible en haut à droite de l'image */
+.photo-modal-close {
+  position: absolute !important;
+  top: -45px !important;
+  right: 0 !important;
+  color: #ffffff !important;
+  font-size: 40px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  z-index: 1000000 !important;
+  transition: color 0.2s ease;
+  line-height: 1;
+}
+
+.photo-modal-close:hover {
+  color: cyan !important;
+}
+
+/* Curseur pointer sur les images concernées */
+body.modal-feature-active .media-item img,
+body.modal-feature-active .media-item-card img,
+body.modal-feature-active .extra-card img {
+  cursor: pointer !important;
+}

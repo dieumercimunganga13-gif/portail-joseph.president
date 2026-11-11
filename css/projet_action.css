@@ -1,0 +1,89 @@
+/* Style des cartes de projets (Seconde image) */
+.projets-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+.projet-card-item {
+  display: flex;
+  width: 100%;
+  height: 180px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Partie photo bordeaux à gauche */
+.card-photo-part {
+  width: 35%;
+  background-color: #000000; /* Dark bordeaux */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Irish Grover", cursive;
+  font-size: 1.8rem;
+  border-right: 3px solid #ffffff;
+}
+
+/* Partie informations bleu nuit à droite */
+.card-info-part {
+  width: 65%;
+  background-color: #353535; /* Dark blue */
+  color: #ffffff;
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-info-part h3 {
+  margin: 0 0 10px 0;
+  font-family: "Irish Grover", cursive;
+  font-size: 1.5rem;
+}
+
+/* Style du bloc vide quand il n'y a pas d'actualités (Troisième image) */
+.empty-state-container {
+  position: relative;
+  font-size: 6.8rem !important;
+  color: cyan;
+  width: 100%;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.empty-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.empty-text {
+  font-family: "Irish Grover", cursive;
+  font-size: 1.8rem;
+  color: #5c0000;
+  transform: rotate(-5deg); /* Légère inclinaison comme sur la maquette */
+  text-align: center;
+}
+
+/* Flèches cyan latérales pour l'état vide */
+.arrow-left-empty {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow-right-empty {
+  position: absolute;
+  right: 25px;
+  top: 25%;
+  transform: translateY(-50%);
+}

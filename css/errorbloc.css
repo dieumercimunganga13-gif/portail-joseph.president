@@ -1,0 +1,79 @@
+/* ==========================================================
+   STYLE & ANIMATION DU BLOC D'ERREUR ROUGE
+   ========================================================== */
+
+/* Animation glissement depuis la gauche */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation de secousse pour l'erreur */
+@keyframes shakeError {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-6px);
+  }
+  40%,
+  80% {
+    transform: translateX(6px);
+  }
+}
+
+.error-message-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background-color: #fee2e2;
+  border: 1.5px solid #ef4444;
+  color: #991b1b;
+  font-size: 0.82rem;
+  font-weight: 600;
+  box-sizing: border-box;
+  margin-top: 5px;
+
+  /* Animation active lors de l'apparition */
+  animation:
+    slideInFromLeft 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+    shakeError 0.4s ease-in-out;
+}
+
+.error-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+/* Bordure rouge sur les champs incomplets */
+.input-error {
+  border-color: #ef4444 !important;
+  background-color: #fff5f5 !important;
+}
+
+/* Mode sombre */
+body.dark-mode .error-message-box {
+  background-color: #450a0a;
+  border-color: #f87171;
+  color: #fca5a5;
+}

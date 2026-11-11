@@ -1,0 +1,88 @@
+.sections-photos {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 70px;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  display: inline-block;
+  padding: 6px 18px;
+  background-color: #000000;
+  color: aliceblue;
+  border-radius: 4px;
+  font-family: "Irish Grover", cursive;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.gallery-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  position: relative;
+}
+
+/* Masque les cartes qui sortent de l'écran (affiche exactement 3 cartes) */
+.media-grid-wrapper {
+  overflow: hidden;
+  width: 600px;
+}
+
+.media-grid {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.media-item {
+  background-color: #d9d9d9;
+  min-width: 180px;
+  width: 180px;
+  height: 280px;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px cyan;
+  flex-shrink: 0;
+}
+
+.media-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-arrow {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.gallery-arrow:hover {
+  background-color: #434343;
+}

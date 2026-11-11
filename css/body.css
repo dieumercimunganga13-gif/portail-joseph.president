@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap");
+body {
+  font-family: "Irish Grover", cursive;
+  background-color: rgb(248, 248, 248);
+  margin: 0;
+  background-size: 100%;
+  font-size: 10px;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 90px;
+  padding: 40px;
+  margin-top: 100px;
+}
+
+/* Transformation de la div en cercle parfait */
+.photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 35%;
+  overflow: hidden;
+  border: 4px solid cyan; /* Optionnel : contour bleu nuit */
+}
+
+/* Ajustement de l'image pour qu'elle remplit bien le cercle */
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bloc du mot du président à côté */
+/* Bloc du mot du président transformé en Post-it avec épingle */
+.president-message.post-it {
+  position: relative;
+  width: 400px;
+  height: 220px;
+  background-color: #000000; /* Couleur lavande/pastel élégante */
+  color: #ffffff; /* Texte sombre pour une bonne lisibilité */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transform: rotate(1deg); /* Légère inclinaison naturelle de post-it */
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+}
+
+.president-message.post-it:hover {
+  transform: rotate(0deg) scale(1.01);
+}
+
+/* Style de l'épingle punaisée en haut au centre */
+.pin-icon {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(
+    circle at 30% 30%,
+    cyan,
+    rgb(123, 241, 241)
+  ); /* Tête d'épingle rouge brillante */
+  border-radius: 50%;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.3),
+    inset 2px 2px 3px rgba(255, 255, 255, 0.6);
+  z-index: 10;
+}
+
+/* Petite ombre de l'épingle sur le papier */
+.pin-icon::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 8px;
+  background-color: rgba(252, 251, 251, 0.2);
+  border-radius: 2px;
+}
+
+/* Style du texte à l'intérieur */
+.president-message.post-it h2 {
+  font-family: "Irish Grover", cursive;
+  font-size: 1.4rem;
+  color: #fcfcfc;
+  margin-bottom: 10px;
+}
+
+.president-message.post-it p {
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #f6f2f2;
+  margin: 0;
+}

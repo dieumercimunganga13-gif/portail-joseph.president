@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/box-actu.css">
+    <link rel="stylesheet" href="css/header-nav.css">
+    <link rel="stylesheet" href="css/btn.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/grid-section.css">
+    <link rel="stylesheet" href="css/filter.css">
+    <link rel="stylesheet" href="css/section-apropos.css">
+    <link rel="stylesheet" href="css/zigzag.css">
+    <link rel="stylesheet" href="css/darkandclair.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/profil.jpeg">
+    <title>Portail-joseph.président/apropos&famille</title>
+</head>
+
+<body>
+    <!-- En-tête -->
+    <header class="header-container">
+        <div class="logo-filter-container">
+            <a class="header-photos" href="index.html">
+                <img src="images/photos_3.jpeg" alt="photo de Joseph">
+            </a>
+            <h1 class="header-title">
+                <span class="title-bold">Président</span>
+                <span class="title-bold">Joseph</span>
+            </h1>
+
+        </div>
+
+        <nav class="header-nav">
+            <input type="checkbox" id="check">
+            <label for="check" class="nav-hamburger"> /// </label>
+
+            <!-- Liens de navigation -->
+            <ul class="nav-links">
+                <li><a href="projet_action.html">Projet / Action</a></li>
+                <li><a href="etudiant.html">Vie étudiants / Services</a></li>
+                <li><a href="contact.html">Contact / Idées</a></li>
+            </ul>
+
+            <!-- Bouton filtre intégré à côté du logo -->
+            <div class="filter-dropdown-container">
+                <button class="filter-btn" id="filterToggleBtn" aria-label="Filtrer">
+                    <svg class="filter-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor"
+                        stroke-width="2" fill="none">
+                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                    </svg>
+                </button>
+                <div class="filter-menu" id="filterMenu">
+                    <a href="projet_action.html?status=encours" class="filter-option" id="optionEncours">
+                        <span class="filter-dot"></span>
+                        <span class="filter-text">En cours</span>
+                    </a>
+                    <a href="projet_action.html?status=avenir" class="filter-option" id="optionAvenir">
+                        <span class="filter-dot"></span>
+                        <span class="filter-text">À venir</span>
+                    </a>
+                    <a href="projet_action.html?status=realises" class="filter-option" id="optionRealises">
+                        <span class="filter-dot"></span>
+                        <span class="filter-text">Réalisés</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--Box actu-->
+    <!-- Box actus -->
+    <div class="box-container">
+        <a href="projet_action.html?status=encours" class="actual-container">
+            <span class="badge badge-light" id="countEncours">4</span>
+            <h1 class="actual-title"> Actualité récentes </h1>
+        </a>
+
+        <a href="projet_action.html?status=avenir" class="even-container">
+            <span class="badge badge-light" id="countAvenir">4</span>
+            <h1 class="actual-title"> Evenement à avenir </h1>
+        </a>
+    </div>
+
+    <!--notification-->
+    <div class="theme-toggle" id="themeToggleBtn" style="cursor: pointer;">
+        <span class="sun-icon" id="sunIcon"> <img src="projet joseph/Sun.png" alt="sun"></span>
+        <span class="moon-icon" id="moonIcon"><img src="projet joseph/Moon.png" alt="Moon"></span>
+    </div>
+    <section class="hero-joseph">
+        <div class="hero-joseph-content">
+            <h1 class="hero-title">À propos de Joseph & Famille</h1>
+            <p class="hero-subtitle">Découvrez les moments marquants et les engagements du président.</p>
+
+            <div class="hero-btn-container">
+                <a href="index.html" class="hero-btn primary-btn">Accueil</a>
+                <a href="#savoirplus" class="hero-btn secondary-btn">En savoir plus</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sections des blocs alternés (À propos de moi & Ma famille) -->
+    <div class="apropos-sections-container" id="savoirplus">
+
+        <!-- Bloc 1 : À propos de moi (Aligné à droite) -->
+        <div class="apropos-card right-card">
+            <div class="card-title-badge">À propos de moi</div>
+            <div class="card-content">
+                <p>
+                    Je suis Joseph Onasambi Longonya, Président des étudiants de l'Université des Sciences et
+                    Technologies (USCITECH) à Kinshasa. Né le 17 juin 2007, je suis un jeune leader passionné par
+                    l'innovation, la technologie et l'entrepreneuriat, mettant mon engagement au service de la jeunesse
+                    congolaise.
+                </p>
+            </div>
+        </div>
+
+        <!-- Bloc 2 : Origines & Famille (Aligné à gauche) -->
+        <div class="apropos-card left-card">
+            <div class="card-title-badge">Origines & Famille</div>
+            <div class="card-content">
+                <p>
+                    Je tire mes valeurs de partage, de discipline et de responsabilité de mes racines familiales. Fils
+                    de Victor Longonya Dikuna et de Bethy Longonya Dembo, j'ai grandi au sein d'une fratrie soudée de 6
+                    enfants dont je suis le 4e :
+                </p>
+                <ul style="margin: 10px 0 0 20px; padding: 0; list-style-type: disc;">
+                    <li>Exaucé Omokende Longonya</li>
+                    <li>Merdiy Longonya Walongonya</li>
+                    <li>Grâce Etshoko Longonya</li>
+                    <li><strong>Joseph Onasambi Longonya (Moi-même)</strong></li>
+                    <li>Abigael Nsambikeya Longonya</li>
+                    <li>Abondance Lokumu Longonya</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bloc 3 : Cursus Scolaire & Universitaire (Aligné à droite) -->
+        <div class="apropos-card right-card">
+            <div class="card-title-badge">Cursus & Éducation</div>
+            <div class="card-content">
+                <p>Mon parcours éducatif reflète mon goût pour l'excellence et la rigueur :</p>
+                <ul style="margin: 10px 0 0 20px; padding: 0; list-style-type: disc;">
+                    <li><strong>Études Primaires :</strong> Complexe Scolaire Kaolti.</li>
+                    <li><strong>Études Secondaires :</strong> Collège Bonsomi (diplôme d'État).</li>
+                    <li><strong>Études Universitaires :</strong> Sciences Économiques à l'Université des Sciences et
+                        Technologies (USCITECH) à Binza-Pigeon.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bloc 4 : Responsabilités & Compétences (Aligné à gauche) -->
+        <div class="apropos-card left-card">
+            <div class="card-title-badge">Engagements & Compétences</div>
+            <div class="card-content">
+                <p><strong>Responsabilités :</strong></p>
+                <ul style="margin: 5px 0 15px 20px; padding: 0; list-style-type: disc;">
+                    <li>Président des Étudiants (USCITECH).</li>
+                    <li>Directeur des Incubateurs du Silicon Campus.</li>
+                    <li>Coordonnateur de l'ASBL Kabola Esengo.</li>
+                </ul>
+                <p><strong>Compétences Clés :</strong> Maîtrise des outils numériques et technologiques, bilinguisme
+                    (français / anglais), gestion économique et stratégie de management d'équipe.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Galerie Photo en Quinconce -->
+    <main class="sections-photos-zigzag">
+        <div class="gallery-header-zigzag">
+            <h1 class="section-title">Mes photos</h1>
+        </div>
+
+        <div class="zigzag-container">
+            <!-- Photo 1 (À gauche avec flèche cyan pointant vers la droite) -->
+            <div class="zigzag-item item-left">
+                <div class="cyan-arrow arrow-right">&#9658;</div>
+                <div class="media-item-card">
+                    <img src="images/photo_1.jpeg" alt="Photo de Joseph 1">
+                </div>
+            </div>
+
+            <!-- Photo 2 (À droite avec flèche cyan pointant vers la gauche) -->
+            <div class="zigzag-item item-right">
+                <div class="cyan-arrow arrow-left">&#9664;</div>
+                <div class="media-item-card">
+                    <img src="images/photo_2.jpeg" alt="Photo de Joseph 2">
+                </div>
+            </div>
+
+            <!-- Photo 3 (À gauche en bas avec flèche cyan pointant vers la droite) -->
+            <div class="zigzag-item item-left">
+                <div class="cyan-arrow arrow-right">&#9658;</div>
+                <div class="media-item-card">
+                    <img src="images/photos_3.jpeg" alt="Photo de Joseph 3">
+                </div>
+            </div>
+
+            <!-- Photo 4 (À droite avec flèche cyan pointant vers la gauche) -->
+            <div class="zigzag-item item-right">
+                <div class="cyan-arrow arrow-left">&#9664;</div>
+                <div class="media-item-card">
+                    <img src="images/profil.jpeg" alt="Photo de Joseph 2">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 2. Nouvelle Grande Section : 8 images supplémentaires -->
+    <main>
+        <section class="extra-gallery-section">
+            <h2 class="extra-gallery-title">Galerie Complémentaire</h2>
+
+            <div class="grid-8-photos">
+                <div class="media-item-card extra-card">
+                    <img src="images/Photo_4.jpeg" alt="Photo 5">
+                </div>
+                <div class="media-item-card extra-card">
+                    <img src="images/photo_5.jpeg" alt="Photo 6">
+                </div>
+                <div class="media-item-card extra-card">
+                    <img src="images/photo_6.jpeg" alt="Photo 7">
+                </div>
+                <div class="media-item-card extra-card">
+                    <img src="images/photo_7.jpeg" alt="Photo 8">
+                </div>
+                <div class="media-item-card extra-card">
+                    <img src="images/photo_8.jpeg" alt="Photo 9">
+                </div>
+                <div class="media-item-card extra-card">
+                    <img src="images/photo_9.jpeg" alt="Photo 10">
+                </div>
+                <div class="media-item-card extra-card">
+                    <img src="images/photo_10.jpeg" alt="Photo 11">
+                </div>
+                <div class="media-item-card extra-card">
+                    <img src="images/photo_11.jpeg" alt="Photo 12">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-container">
+        <p class="footer-text">Copyright &copy; 2026 Président Joseph onasambi. Tous droits réservés.</p>
+
+        <div class="footer-links">
+            <a href="apropos.html">Dev by Dieumerci munganga</a>
+        </div>
+    </footer>
+    <script src="js/filter.js"></script>
+    <script src="js/darkandclair.js"></script>
+    <script src="js/preview-photo.js"></script>
+</body>
+
+</html>

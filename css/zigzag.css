@@ -1,0 +1,162 @@
+.sections-photos-zigzag {
+  width: 100%;
+  max-width: 900px;
+  margin: 60px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* En-tête du titre "Mes photos" aligné discrètement */
+.gallery-header-zigzag {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+/* Conteneur global des lignes */
+.zigzag-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+/* Ligne individuelle */
+.zigzag-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Alignement à gauche */
+.zigzag-item.item-left {
+  justify-content: flex-start;
+  padding-left: 50px;
+}
+
+/* Alignement à droite */
+.zigzag-item.item-right {
+  justify-content: flex-end;
+  padding-right: 50px;
+}
+
+/* Style de la carte photo verticale aux coins arrondis */
+.media-item-card {
+  background-color: #d9d9d9;
+  width: 220px;
+  height: 330px;
+  border-radius: 35px; /* Coins arrondis fidèles à la maquette */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  border: 3px solid #ffffff;
+}
+
+.media-item-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Style des flèches cyan sur les côtés */
+.cyan-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #00bcff;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(0, 188, 255, 0.5);
+  z-index: 2;
+}
+
+/* Position des flèches selon le côté */
+.item-left .cyan-arrow {
+  left: 10px;
+}
+
+.item-right .cyan-arrow {
+  right: 10px;
+}
+
+/* Adaptation pour les écrans mobiles */
+@media (max-width: 768px) {
+  .zigzag-item.item-left,
+  .zigzag-item.item-right {
+    justify-content: center;
+    padding: 0;
+  }
+  .cyan-arrow {
+    display: none; /* Masque les flèches sur petit écran pour plus de clarté */
+  }
+}
+
+.extra-gallery-section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 60px auto 40px auto;
+  text-align: center;
+}
+
+.extra-gallery-title {
+  font-family: "Irish Grover", cursive;
+  font-size: 1.8rem;
+  color: #353535;
+  margin-bottom: 30px;
+}
+
+/* Grille CSS responsive de 8 photos (4 colonnes par rangée sur grand écran) */
+.grid-8-photos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  padding: 10px;
+}
+
+/* Style des cartes d'images avec ombre cyan */
+.extra-card {
+  width: 100%;
+  height: 280px;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.6); /* Effet contour/ombre cyan */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.extra-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.extra-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px cyan;
+}
+
+/* Adaptation pour les smartphones et tablettes */
+@media (max-width: 900px) {
+  .grid-8-photos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .grid-8-photos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Adaptation du titre en mode sombre */
+body.dark-mode .extra-gallery-title {
+  color: #ffffff !important;
+}

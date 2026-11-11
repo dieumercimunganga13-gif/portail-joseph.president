@@ -1,0 +1,95 @@
+.box-container {
+  display: flex;
+  width: 100%;
+  position: relative; /* Nécessaire pour centrer le theme-toggle */
+  margin-top: 10px;
+}
+
+/* Style de base pour chaque bloc (50% de largeur chacun et agencement flex) */
+.actual-container,
+.even-container {
+  flex: 1;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  text-decoration: none !important; /* Supprime le soulignement des liens */
+}
+
+/* Bloc de gauche : Actualités récentes */
+.actual-container {
+  background-color: #353535;
+  cursor: pointer;
+}
+
+.actual-container .actual-title {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0;
+  text-align: center;
+}
+
+.even-container {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.even-container:hover {
+  background-color: cyan;
+}
+
+.even-container .actual-title {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0;
+  text-align: center;
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background-color: #ffffff;
+  color: #052358;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+/* Commutateur Jour / Nuit au centre sous les deux cartes */
+.theme-toggle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #353535;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 6px 16px;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.theme-toggle img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.sun-icon,
+.moon-icon {
+  font-size: 1rem;
+  cursor: pointer;
+}

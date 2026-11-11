@@ -1,0 +1,77 @@
+.filter-dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.filter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #353535;
+  border: none;
+  border-radius: 20px;
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+/* Menu déroulant aligné à droite pour ne pas déborder du header */
+.filter-menu {
+  position: absolute;
+  top: 40px;
+  right: 0; /* Aligné à droite par rapport au bouton */
+  left: auto;
+  background-color: #353535;
+  border-radius: 12px;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  min-width: 140px;
+
+  /* Masqué par défaut */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.25s ease-in-out;
+}
+
+.filter-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  text-decoration: none !important;
+}
+
+.filter-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.filter-dot.cyan-dot {
+  background-color: cyan;
+  box-shadow: 0 0 6px cyan;
+}
+
+.filter-text {
+  font-family: "Irish Grover", cursive;
+  color: #ffffff;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.filter-option:hover .filter-text {
+  color: cyan;
+}

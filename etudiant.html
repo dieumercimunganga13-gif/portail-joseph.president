@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/box-actu.css">
+    <link rel="stylesheet" href="css/header-nav.css">
+    <link rel="stylesheet" href="css/btn.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/grid-section.css">
+    <link rel="stylesheet" href="css/filter.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/e-etudiant.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/profil.jpeg">
+    <title>Portail-joseph.président</title>
+</head>
+
+<body>
+    <!-- En-tête -->
+    <header class="header-container">
+        <div class="logo-filter-container">
+            <a class="header-photos" href="index.html">
+                <img src="images/photos_3.jpeg" alt="photo de Joseph">
+            </a>
+            <h1 class="header-title">
+                <span class="title-bold">Président</span>
+                <span class="title-bold">Joseph</span>
+            </h1>
+
+        </div>
+
+        <nav class="header-nav">
+            <input type="checkbox" id="check">
+            <label for="check" class="nav-hamburger"> /// </label>
+
+            <!-- Liens de navigation -->
+            <ul class="nav-links">
+                <li><a href="apropos.html">À propos / Famille</a></li>
+                <li><a href="projet_action.html">Projet / Action</a></li>
+                <li><a href="contact.html">Contact / Idées</a></li>
+            </ul>
+
+            <!-- Bouton filtre intégré à côté du logo -->
+            <div class="filter-dropdown-container">
+                <button class="filter-btn" id="filterToggleBtn" aria-label="Filtrer">
+                    <svg class="filter-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor"
+                        stroke-width="2" fill="none">
+                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                    </svg>
+                </button>
+                <div class="filter-menu" id="filterMenu">
+                    <a href="projet_action.html?status=encours" class="filter-option" id="optionEncours">
+                        <span class="filter-dot"></span>
+                        <span class="filter-text">En cours</span>
+                    </a>
+                    <a href="projet_action.html?status=avenir" class="filter-option" id="optionAvenir">
+                        <span class="filter-dot"></span>
+                        <span class="filter-text">À venir</span>
+                    </a>
+                    <a href="projet_action.html?status=realises" class="filter-option" id="optionRealises">
+                        <span class="filter-dot"></span>
+                        <span class="filter-text">Réalisés</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Box actus -->
+    <div class="box-container">
+        <a href="projet_action.html?status=encours" class="actual-container">
+            <span class="badge badge-light" id="countEncours">4</span>
+            <h1 class="actual-title"> Actualité récentes </h1>
+        </a>
+
+        <a href="projet_action.html?status=avenir" class="even-container">
+            <span class="badge badge-light" id="countAvenir">4</span>
+            <h1 class="actual-title"> Evenement à avenir </h1>
+        </a>
+    </div>
+
+    <!-- CONTENU PRINCIPAL : VIE ÉTUDIANTE / DOCUMENTS -->
+    <main class="etudiant-container">
+        <div class="cyan-triangle-tl"></div>
+
+        <!-- Bouton Tout replier -->
+        <div class="collapse-top-bar">
+            <button class="collapse-btn" id="collapseAllBtn">Tout replier</button>
+        </div>
+
+        <!-- Grille principale des catégories -->
+        <div class="etudiant-grid">
+
+            <!-- Colonne 1 : Téléchargement des documents -->
+            <div class="doc-category-group">
+                <div class="doc-main-btn">Téléchargement du document</div>
+                <div class="doc-content-box">
+                    <a href="#" class="doc-sub-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Emplois du temps
+                    </a>
+                </div>
+            </div>
+
+            <!-- Colonne 2 : Guide de l'étudiant -->
+            <div class="doc-category-group">
+                <div class="doc-main-btn">Guide de l'étudiant</div>
+                <div class="doc-content-box">
+                    <a href="#" class="doc-sub-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Règlement intérieur
+                    </a>
+                </div>
+            </div>
+
+            <!-- Colonne 3 : Guides des démarches -->
+            <div class="doc-category-group">
+                <div class="doc-main-btn">Guides des démarches</div>
+                <div class="doc-content-box">
+                    <a href="#" class="doc-sub-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        réclamation académique
+                    </a>
+                    <a href="#" class="doc-sub-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Guide des démarches administratives
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Section Signature -->
+        <div class="president-sign-section">
+            <h2>JOSEPH ONASAMBI</h2>
+            <p>Servir pour la jeunesse congolaise</p>
+        </div>
+
+        <div class="cyan-triangle-br"></div>
+    </main>
+
+    <footer class="footer-container">
+        <p class="footer-text">Copyright &copy; 2026 Président Joseph onasambi. Tous droits réservés.</p>
+
+        <div class="footer-links">
+            <a href="etudiant.html">Dev by Dieumerci munganga</a>
+        </div>
+    </footer>
+
+    <script src="js/filter.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/preview-photo.js"></script>
+    <script src="js/reply.js"></script>
+</body>
+
+</html>

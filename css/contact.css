@@ -1,0 +1,279 @@
+/* ==========================================================
+   CADRE SMARTPHONE (MODE SMARTPHONE) 
+   ========================================================== */
+@keyframes slideInPhone {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Grille principale en deux colonnes égales (50% - 50%) avec l'image en fond à droite */
+.split-contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100vh - 150px);
+  box-sizing: border-box;
+  background-image: url("../images/photos_3.jpeg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 50% 100%;
+}
+
+/* Colonne de gauche : Le Smartphone */
+.split-phone-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+.smartphone-frame {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  min-height: 560px;
+  background: var(--card-bg, #ffffff);
+  border: 07px solid #4a5568; /* Cadre phone */
+  border-radius: 40px;
+  padding: 50px 15px 25px 15px; /* Espace na likolo mpo na encoche */
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    inset 0 0 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  animation: slideInPhone 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Encoche (Notch) ya phone na likolo */
+.smartphone-frame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 25px;
+  background-color: #4a5568;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+/* Style ya Avatar mpo e-entrer malamu na kati ya cadre */
+.contact-avatar-wrapper {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, cyan, #7b2cbf);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.contact-avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* Titre mpe email */
+.contact-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 5px 0 2px 0;
+  color: var(--text-color, #111);
+}
+
+.contact-email {
+  font-size: 0.85rem;
+  color: #718096;
+  margin: 0 0 10px 0;
+}
+
+/* Liste ya ba boutons */
+.contact-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.contact-link-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+.contact-link-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.link-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.link-arrow {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Couleurs ya ba boutons */
+.btn-whatsapp {
+  background-color: #25d366;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e0;
+  background-color: #f7fafc;
+  font-family: inherit;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus {
+  border-color: cyan;
+}
+
+.form-textarea {
+  width: 100%;
+  height: 80px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e0;
+  background-color: #f7fafc;
+  font-family: inherit;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  resize: none;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-textarea:focus {
+  border-color: cyan;
+}
+
+.form-submit-btn {
+  width: 100%;
+  padding: 11px;
+  border-radius: 10px;
+  border: none;
+  background-color: #0d233a;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    transform 0.1s;
+}
+
+.form-submit-btn:hover {
+  background-color: #1a365d;
+  transform: translateY(-1px);
+}
+
+/* Colonne de droite vide */
+.split-image-side {
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========================================================
+   ADAPTATION MODE SOMBRE (DARK MODE) UNIQUEMENT POUR LE SMARTPHONE
+   ========================================================== */
+body.dark-mode .smartphone-frame {
+  background-color: #030303 !important;
+  border-color: #353535 !important;
+}
+body.dark-mode .smartphone-frame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 25px;
+  background-color: #353535 !important;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  z-index: 10;
+}
+
+body.dark-mode .smartphone-frame .contact-name {
+  color: #f8fafc !important;
+}
+
+body.dark-mode .smartphone-frame .contact-email {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .smartphone-frame p {
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .smartphone-frame .form-input,
+body.dark-mode .smartphone-frame .form-textarea {
+  background-color: #fdfdfd !important;
+  color: black !important;
+  border-color: #334155 !important;
+}
+
+/* Responsive Mobile / Tablettes */
+@media (max-width: 900px) {
+  .split-contact-container {
+    grid-template-columns: 1fr;
+    background-size: cover;
+    background-position: center;
+  }
+}

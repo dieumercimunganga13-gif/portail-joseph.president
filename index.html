@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/box-actu.css">
+    <link rel="stylesheet" href="css/header-nav.css">
+    <link rel="stylesheet" href="css/btn.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/grid-section.css">
+    <link rel="stylesheet" href="css/filter.css">
+    <link rel="stylesheet" href="css/darkandclair.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/profil.jpeg">
+    <title>Portail-joseph.président</title>
+</head>
+
+<body>
+    <!-- En-tête -->
+    <header class="header-container">
+        <div class="logo-filter-container">
+            <a class="header-photos" href="index.html">
+                <img src="images/photos_3.jpeg" alt="photo de Joseph">
+            </a>
+            <h1 class="header-title">
+                <span class="title-bold">Président</span>
+                <span class="title-bold">Joseph</span>
+            </h1>
+
+        </div>
+
+        <nav class="header-nav">
+            <input type="checkbox" id="check">
+            <label for="check" class="nav-hamburger"> /// </label>
+
+            <!-- Liens de navigation -->
+            <ul class="nav-links">
+                <li><a href="apropos.html">À propos / Famille</a></li>
+                <li><a href="projet_action.html">Projet / Action</a></li>
+                <li><a href="etudiant.html">Vie étudiants / Services</a></li>
+                <li><a href="contact.html">Contact / Idées</a></li>
+            </ul>
+
+            <!-- Bouton filtre intégré à côté du logo -->
+            <div class="filter-dropdown-container">
+                <button class="filter-btn" id="filterToggleBtn" aria-label="Filtrer">
+                    <svg class="filter-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor"
+                        stroke-width="2" fill="none">
+                        <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                    </svg>
+                </button>
+                <div class="filter-menu" id="filterMenu">
+                    <a href="projet_action.html?status=encours" class="filter-option" id="optionEncours">
+                        <span class="filter-dot"></span>
+                        <span class="filter-text">En cours</span>
+                    </a>
+                    <a href="projet_action.html?status=avenir" class="filter-option" id="optionAvenir">
+                        <span class="filter-dot"></span>
+                        <span class="filter-text">À venir</span>
+                    </a>
+                    <a href="projet_action.html?status=realises" class="filter-option" id="optionRealises">
+                        <span class="filter-dot"></span>
+                        <span class="filter-text">Réalisés</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Box actus -->
+    <div class="box-container">
+        <a href="projet_action.html?status=encours" class="actual-container">
+            <span class="badge badge-light" id="countEncours">4</span>
+            <h1 class="actual-title"> Actualité récentes </h1>
+        </a>
+
+        <a href="projet_action.html?status=avenir" class="even-container">
+            <span class="badge badge-light" id="countAvenir">4</span>
+            <h1 class="actual-title"> Evenement à avenir </h1>
+        </a>
+    </div>
+
+    <!-- Bouton mode sombre / clair -->
+    <div class="theme-toggle" id="themeToggleBtn" style="cursor: pointer;">
+        <span class="sun-icon" id="sunIcon"> <img src="projet joseph/Sun.png" alt="sun"></span>
+        <span class="moon-icon" id="moonIcon"><img src="projet joseph/Moon.png" alt="Moon"></span>
+    </div>
+
+    <!-- Section photo et mot du président (Post-it épinglé) -->
+    <main class="container">
+        <div class="photo">
+            <img src="images/profil-uscitech.jpeg" alt="photo" width="75%" height="75%">
+        </div>
+        <div class="president-message post-it">
+            <div class="pin-icon"></div>
+            <h2>MOT DU PRÉSIDENT DU JOUR : <span id="currentDate"></span></h2>
+            <p>Le mot du président de l'USCITECH...</p>
+        </div>
+    </main>
+
+    <!-- Raccourcis -->
+    <div class="shortcut-section">
+        <div class="btn-container">
+            <a href="contact.html" class="btn btn-login">Boite à Idées</a>
+            <a href="etudiant.html" class="btn btn-signup">Réglements</a>
+            <a href="#" class="btn btn-signup">Group whatsapp</a>
+        </div>
+        <div class="triangle-bg"></div>
+    </div>
+
+    <!-- Section Galerie Photo -->
+    <main class="sections-photos">
+        <div class="gallery-header">
+            <h1 class="section-title">Mes photos</h1>
+        </div>
+        <div class="gallery-container">
+            <!-- Bouton flèche gauche -->
+            <button class="gallery-arrow left-arrow" id="prevBtn">&#9664;</button>
+
+            <!-- Wrapper qui masque les cartes hors-champ -->
+            <div class="media-grid-wrapper">
+                <div class="media-grid" id="mediaGrid">
+                    <div class="media-item"><img src="images/photo_1.jpeg" alt="Photo 1"></div>
+                    <div class="media-item"><img src="images/photo_2.jpeg" alt="Photo 2"></div>
+                    <div class="media-item"><img src="images/photos_3.jpeg" alt="Photo 3"></div>
+                    <div class="media-item"><img src="images/Photo_4.jpeg" alt="Photo 4"></div>
+                    <div class="media-item"><img src="images/photo_5.jpeg" alt="Photo 5"></div>
+                    <div class="media-item"><img src="images/photo_6.jpeg" alt="Photo 6"></div>
+                    <div class="media-item"><img src="images/photo_7.jpeg" alt="Photo 7"></div>
+                    <div class="media-item"><img src="images/photo_8.jpeg" alt="Photo 8"></div>
+                    <div class="media-item"><img src="images/photo_9.jpeg" alt="Photo 9"></div>
+                    <div class="media-item"><img src="images/photo_10.jpeg" alt="Photo 10"></div>
+                    <div class="media-item"><img src="images/photo_11.jpeg" alt="Photo 11"></div>
+                    <div class="media-item"><img src="images/photo_12.jpeg" alt="Photo 12"></div>
+                </div>
+            </div>
+
+            <!-- Bouton flèche droite -->
+            <button class="gallery-arrow right-arrow" id="nextBtn">&#9658;</button>
+        </div>
+    </main>
+
+    <footer class="footer-container">
+        <p class="footer-text">Copyright &copy; 2026 Président Joseph onasambi. Tous droits réservés.</p>
+
+        <div class="footer-links">
+            <a href="index.html">Dev by Dieumerci munganga</a>
+        </div>
+    </footer>
+
+    <script src="js/filter.js"></script>
+    <script src="js/darkandclair.js"></script>
+    <script src="js/datechange.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/preview-photo.js"></script>
+</body>
+
+</html>

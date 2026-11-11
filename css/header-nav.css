@@ -1,0 +1,77 @@
+/* En-tête global en ligne */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(0, 0, 0);
+  padding: 15px 30px;
+  border-radius: 8px;
+  gap: 20px;
+}
+
+/* Conteneur Logo + Titre */
+.logo-filter-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Style de l'image du logo */
+.header-photos img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid cyan;
+}
+
+/* Texte du président */
+.header-title {
+  font-size: 15px;
+  color: #fcfcfc;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+/* Navigation centrale et droite */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Espace net entre les liens et le filtre */
+}
+
+/* Liste des liens de navigation */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px; /* Espace fluide entre chaque lien */
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fcfcfc;
+  font-size: 15px;
+  border-bottom: 1px solid cyan;
+  padding-bottom: 3px;
+  white-space: nowrap;
+}
+
+.nav-links a:hover {
+  color: cyan;
+}
+
+/* Positionnement propre du bouton de filtre sur grand écran */
+.header-nav .filter-dropdown-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Masquer la checkbox et le hamburger sur grand écran */
+.header-nav input[type="checkbox"],
+.nav-hamburger {
+  display: none;
+}

@@ -1,0 +1,56 @@
+.btn-container {
+  display: flex;
+  gap: 25px; /* Espace entre les boutons */
+  margin: 30px 0;
+  align-items: flex-start; /* Aligné à gauche comme sur la maquette */
+  padding-left: 210px;
+}
+
+/* Style commun des boutons */
+.btn {
+  display: inline-block;
+  background-color: #000000; /* Fond bordeaux foncé */
+  color: #ffffff; /* Texte blanc */
+  font-family: "Irish Grover", cursive;
+  text-decoration: none;
+  padding: 12px 25px;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  min-width: 180px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+/* Effet au survol de la souris */
+.btn:hover {
+  background-color: #393939;
+}
+
+.shortcut-section {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  min-height: 300px;
+}
+
+.triangle-bg {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-48%);
+  width: 0;
+  height: 0;
+  border-top: 100px solid transparent;
+  border-bottom: 130px solid transparent;
+  width: 350px;
+  height: 400px;
+  background-image: url("Polygon 25.png"); /* Vérifie bien le chemin du fichier */
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  z-index: 1;
+}

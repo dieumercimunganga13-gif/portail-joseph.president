@@ -1,0 +1,151 @@
+body {
+  position: relative;
+  background-image: url(bibliothèque2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #ffffff !important; /* Force le texte en blanc pour bien ressortir sur fond sombre */
+}
+
+.etudiant-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.collapse-top-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+}
+
+.collapse-btn {
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  color: inherit;
+}
+
+.etudiant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.doc-category-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Bouton principal de la catégorie (ex: Téléchargement des documents) */
+.doc-main-btn {
+  background-color: #353535;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.05rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Grand bloc contenant les sous-éléments */
+.doc-content-box {
+  background-color: #353535;
+  border-radius: 20px;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.25s ease-in-out;
+}
+
+/* Petit bouton vert pour chaque document */
+.doc-sub-item {
+  background-color: #008751; /* Vert drapeau / style maquette */
+  color: #ffffff;
+  padding: 12px 18px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+  transition: all 0.25s ease-in-out;
+}
+
+.doc-sub-item:hover {
+  background-color: #006b3f;
+  transform: translateY(-2px);
+}
+
+.doc-sub-item svg,
+.doc-sub-item span {
+  flex-shrink: 0;
+}
+
+/* Section Signature / Citation */
+.president-sign-section {
+  text-align: center;
+  margin: 60px 0 30px 0;
+}
+
+.president-sign-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.president-sign-section p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+/* Triangles décoratifs cyan */
+.cyan-triangle-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, cyan 50%, transparent 50%);
+  z-index: -1;
+}
+
+.cyan-triangle-br {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(315deg, cyan 50%, transparent 50%);
+  z-index: -1;
+}
+
+.doc-content-box.collapsed {
+  max-height: 0 !important;
+  opacity: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: none !important;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Soki olingi ba titres mpe ezala cliquable */
+.doc-main-btn {
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.25s ease-in-out;
+}

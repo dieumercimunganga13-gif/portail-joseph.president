@@ -1,0 +1,188 @@
+@media screen and (max-width: 900px) {
+  /* 1. SECTION ACCUEIL : Photo au-dessus et Mot du président en-dessous */
+  .container {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 30px !important;
+    padding: 20px !important;
+    margin-top: 60px !important;
+  }
+  .container .photo {
+    top: 220px;
+    width: 220px !important;
+    height: 220px !important;
+    border-radius: 50% !important;
+    margin: 0 auto !important;
+  }
+
+  .president-message.post-it {
+    width: 90% !important;
+    max-width: 350px !important;
+    margin: 0 auto !important;
+  }
+
+  /* 2. BLOCS D'ACTUALITÉS DU HAUT (Empilés verticalement) */
+  .box-container {
+    display: flex;
+    flex-direction: column !important;
+    width: 100% !important;
+    position: relative;
+    margin-top: 10px;
+  }
+
+  .actual-container,
+  .even-container {
+    width: 100% !important;
+  }
+
+  /* 3. SECTION DES RACCOURCIS ET BOUTONS (Centrés) */
+  .shortcut-section {
+    flex-direction: column !important;
+    align-items: center !important;
+    min-height: auto !important;
+    margin-bottom: 30px !important;
+  }
+
+  .btn-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding-left: 0 !important;
+    margin: 20px auto !important;
+    width: 100% !important;
+    gap: 15px !important;
+  }
+
+  .btn {
+    width: 85% !important;
+    max-width: 280px !important;
+    text-align: center !important;
+  }
+
+  /* 4. REDIMENSIONNEMENT DU TRIANGLE DE FOND (Polygon) */
+  .triangle-bg {
+    width: 160px !important;
+    height: 160px !important;
+    background-size: contain !important;
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    bottom: auto !important;
+    top: auto !important;
+    transform: none !important;
+  }
+
+  /* 5. FOOTER (Pied de page propre et centré) */
+  .footer-container {
+    flex-direction: column !important;
+    gap: 15px !important;
+    text-align: center !important;
+    padding: 20px !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    box-sizing: border-box !important;
+    margin-top: 40px !important;
+  }
+
+  /* Organisation générale de l'en-tête */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #000;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .logo-filter-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .header-title {
+    display: none; /* Cache le titre texte sur mobile si la maquette ne l'affiche pas dans le header */
+  }
+
+  /* Cacher le filtre du haut sur mobile pour le mettre dans le menu plein écran */
+  .logo-filter-container .filter-dropdown-container {
+    display: none;
+  }
+
+  /* --- MENU PLEIN ÉCRAN MOBILE (Fond bleu) --- */
+  .header-nav {
+    position: static;
+  }
+
+  /* Bouton hamburger (les trois traits /// en cyan) */
+  .nav-hamburger {
+    display: block !important;
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: cyan;
+    z-index: 1200;
+  }
+
+  .header-nav input[type="checkbox"] {
+    display: none;
+  }
+
+  /* Conteneur du menu plein écran */
+  .header-nav .nav-links {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: #353535;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    z-index: 1100;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* Affichage du menu lorsque la case est cochée */
+  .header-nav input[type="checkbox"]:checked ~ .nav-links {
+    display: flex !important;
+  }
+
+  /* Style des liens dans le menu mobile */
+  .nav-links li a {
+    font-family: "Irish Grover", cursive;
+    font-size: 1.3rem;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid cyan;
+    padding-bottom: 4px;
+    white-space: nowrap;
+  }
+
+  .nav-links li a:hover {
+    color: cyan;
+  }
+
+  /* Intégration du bloc filtre tout en bas du menu mobile (comme sur l'image 2) */
+  .header-nav .filter-dropdown-container-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .mobile-filter-section {
+    display: none;
+  }
+}

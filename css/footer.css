@@ -1,0 +1,29 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw; /* Prend toute la largeur de l'écran */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw; /* Annule les marges du body */
+  margin-right: -50vw;
+  background-color: black;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  margin-top: 107px;
+}
+
+.footer-links a {
+  color: #ecfeff;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  border-bottom: 1px solid cyan;
+}
+
+.footer-text {
+  font-size: 1rem;
+  color: #ecfeff;
+  margin: 0;
+}
